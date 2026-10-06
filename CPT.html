@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Wise Button</title>
+    <style>
+      body {
+        margin: 0;
+        height: 110vh;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+    </style>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body x-data="{
+    advice: '',
+    promptlist: [
+      'At the end of the day, there is a sunset.',
+      'If you can\'t swim, don\'t go swimming in the ocean alone.',
+      'Don\'t forget to drink water.',
+      'There is 100% fatality when person never sleeps.',
+      'The more you know, the more you understand how much you still have to learn.',
+      'The winner is the loser who tried one more time.',
+      'Don\'t drink lava, it\'ll hurt.',
+      'You are alive, so do your best.',
+      'Fishes usually can\'t breathe on the surface.',
+      'Avoid the cheese touch.',
+      'If you close your eyes, it gets dark.',
+      'Every 60 seconds in Africa, a minute passes.',
+      'To avoid falling down, stay on the ground.',
+      'If you are hungry, eating food usually helps.',
+      'Your shoes will last much longer if you don\'t wear them.',
+      'If you turn on the light, the room will be brighter.',
+      'People with birthdays live longer lives on average.',
+      'If you put a hot drink in the freezer, it won\'t stay hot.',
+      'Walking backwards makes you look like you are leaving.',
+      'If you never open your mail, you\'ll never get bad news.',
+      'Water is wet, unless it\'s frozen.',
+      'If you want to know what time it is, look at a clock.'
+    ],
+    getAdvice() {
+      const randomIndex = Math.floor(Math.random() * this.promptlist.length);
+      this.advice = this.promptlist[randomIndex];
+    }
+}">
+    <h3><p>The wisest button on the planet</p></h3>
+    <p>Click on it to get an advice!!!</p>
+    <div class="input-row">
+      <div class="section">
+        <div id="TODObutton">
+          <button @click="getAdvice()">Click here</button>
+        </div>
+      </div>
+    </div>
+    <p id="advice-display" x-text="advice"></p>
+    <script>
+      // Assisted by AI for logic & syntax errors
+
+      /*
+      *Achnowledgement:
+      *AI was used to assisi in creating the randdom index logic
+      *And fixing DOM section in the script
+      *Also used to convert an algorithm into alpinejs
+      *So it could work on flowchart
+      */ 
+    </script>
+</body>
+</html>
